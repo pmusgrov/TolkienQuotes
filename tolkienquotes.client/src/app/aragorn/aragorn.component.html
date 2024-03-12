@@ -30,14 +30,18 @@
 
   <!-- Quote placeholder -->
   <div class="quote-placeholder">
-    <p>Quote: <!-- Add the quote here --></p>
     <p>
       You may save this quote, find a new one, or return to the selection screen! Make your choice
       carefully, once gone you may not see this quote again!
     </p>
     <!-- Add save placeholder button here -->
-    <button>Save</button>
-    <button>New Quote</button>
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
     <button routerLink="/home">Back</button>
   </div>
 </body>
