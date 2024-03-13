@@ -9,5 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="src\assets\characters\" />
+    <Folder Include="src\assets\background\" />
   </ItemGroup>
 </Project>

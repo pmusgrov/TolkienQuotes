@@ -14,4 +14,7 @@ export class AppComponent implements OnInit {
     // Navigate to the home page (replace 'home' with the actual route)
     this.router.navigateByUrl('/home');
   }
+
 }
+
+
