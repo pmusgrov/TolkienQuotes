@@ -1,16 +1,18 @@
 <div class="background-container">
   <div class="menu-bar">
-    <button class="menu-button" (click)="toggleMenu()">Account</button>
-    <div class="dropdown-menu" *ngIf="isMenuOpen">
+    <button class="menu-button" (mouseenter)="toggleMenu()">Menu</button>
+  
+    <div class="dropdown-menu" *ngIf="isMenuOpen" >
       <!-- Add your menu items here -->
       <a href="#">Account</a>
       <a href="#">Saved Quotes</a>
       <a href="#">Logout</a>
-    </div>
+      </div>
   </div>
-  <!-- Welcome message -->
-  <p>Welcome to Tolkien Quotes! Please click on a character to learn more about them and generate a quote.</p>
-
+  <div class="introductory-paragraph">
+    <!-- Welcome message -->
+    <p>Welcome to Tolkien Quotes! Please click on a character to learn about a character and generate a quote.</p>
+  </div>
   <!-- Character buttons -->
   <div class="character-buttons">
     <!-- Replace the URLs with the actual image URLs -->

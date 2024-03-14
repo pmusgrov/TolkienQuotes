@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "@auth0/auth0-angular": "^2.2.3"
+    "@auth0/auth0-angular": "^2.2.3",
+    "@fortawesome/angular-fontawesome": "^0.14.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1"
   }
 }
