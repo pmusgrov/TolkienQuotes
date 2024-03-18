@@ -1,1 +1,35 @@
-<p>gollum works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/gollum.jpg" alt="Gollum">
+
+    <!-- Gollum information paragraph -->
+    <div class="character-info">
+      <p>
+        Gollum, also known as Sméagol, is a tragic and complex character in J.R.R. Tolkien's "The Lord of the Rings" trilogy. Once a Hobbit-like creature, Gollum's obsession with the One Ring corrupts him over centuries, twisting his mind and body into a wretched and pitiful figure. Despite his malevolent tendencies and split personality, Gollum harbors a twisted love-hate relationship with the Ring, which he refers to as "my precious." His cunning and deceitful nature make him both a dangerous adversary and an invaluable guide to Frodo Baggins and Samwise Gamgee during their quest to destroy the Ring. Gollum's internal struggle between his desire for the Ring and fleeting moments of remorse and redemption adds depth to his character, serving as a poignant reminder of the corrupting influence of power and the potential for redemption even in the darkest of souls.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>
+

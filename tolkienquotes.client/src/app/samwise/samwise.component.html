@@ -1,0 +1,34 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/samwise.jpg" alt="Samwise">
+
+    <!-- Samwise information paragraph -->
+    <div class="character-info">
+      <p>Samwise Gamgee, often referred to as Sam, is the loyal and steadfast companion of Frodo Baggins in J.R.R. Tolkien's "The Lord of the Rings" trilogy. Initially portrayed as Frodo's gardener and close friend, Sam emerges as a hero in his own right, demonstrating unparalleled loyalty, courage, and resilience throughout the quest to destroy the One Ring. Despite his humble origins, Sam proves himself an invaluable member of the Fellowship, providing unwavering support and unwavering optimism in the face of daunting challenges. His unwavering commitment to Frodo's mission, as well as his enduring friendship and selflessness, serve as a beacon of hope and inspiration to his companions and readers alike. Sam's journey from a simple gardener to a noble and courageous hero embodies the timeless themes of friendship, sacrifice, and the triumph of good over evil in Tolkien's epic tale.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>
+

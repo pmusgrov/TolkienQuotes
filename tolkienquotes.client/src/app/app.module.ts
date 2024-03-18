@@ -17,6 +17,7 @@ import { FrodoComponent } from './frodo/frodo.component';
 import { GimiliComponent } from './gimili/gimili.component';
 import { GollumComponent } from './gollum/gollum.component';
 import { LegolasComponent } from './legolas/legolas.component';
+import { SamwiseComponent } from './samwise/samwise.component';
 
 
 
@@ -33,6 +34,7 @@ import { LegolasComponent } from './legolas/legolas.component';
     GimiliComponent,
     GollumComponent,
     LegolasComponent,
+    SamwiseComponent,
   ],
   imports: [
     BrowserModule,

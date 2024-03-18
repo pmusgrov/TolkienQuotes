@@ -1,1 +1,33 @@
-<p>frodo works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/frodo.jpg" alt="Frodo">
+
+    <!-- Aragorn information paragraph -->
+    <div class="character-info">
+      <p>Frodo Baggins, a hobbit from the Shire, emerges as the central protagonist in J.R.R. Tolkien's "The Lord of the Rings" trilogy. Entrusted with the perilous task of destroying the One Ring, Frodo embarks on an epic journey alongside the Fellowship of the Ring. Despite his modest stature, Frodo displays remarkable courage, resilience, and unwavering determination as he confronts the malevolent forces of Sauron. Throughout his quest, Frodo grapples with the burden of carrying the Ring, facing numerous trials and tribulations that test his resolve and integrity. Guided by his steadfast friendship with Samwise Gamgee and the guidance of wise mentors like Gandalf, Frodo exemplifies the enduring spirit of heroism and self-sacrifice as he strives to save Middle-earth from the darkness that threatens to engulf it.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>

@@ -1,1 +1,34 @@
-<p>gimili works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/gimili.jpg" alt="Gimili">
+
+    <!-- Gimili information paragraph -->
+    <div class="character-info">
+      <p>Gimli, son of Glóin, is a stout-hearted Dwarf warrior and member of the Fellowship of the Ring in J.R.R. Tolkien's "The Lord of the Rings" trilogy. Proud and fierce, Gimli represents the resilience and loyalty of his people as they join forces to combat the growing darkness in Middle-earth. Despite initial tensions between Dwarves and Elves, Gimli forms a deep bond of friendship with Legolas, showcasing his capacity for unity and camaraderie. Throughout the quest, Gimli proves himself a valiant fighter, unyielding in the face of adversity, and fiercely protective of his companions. His unwavering courage, indomitable spirit, and unwavering loyalty make him an integral member of the Fellowship, contributing to their success in the struggle against Sauron and the forces of Mordor.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>
+

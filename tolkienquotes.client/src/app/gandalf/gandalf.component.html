@@ -1,41 +1,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gandalf</title>
-  <style>
-    .container {
-      display: flex;
-      align-items: center;
-    }
-
-    .character-info {
-      margin-left: 20px;
-    }
-
-    .quote-placeholder {
-      margin-top: 20px;
-    }
-  </style>
+  <title>Arwen</title>
 </head>
 <body>
   <div class="container">
-    <!-- Gandalf image -->
+    <!--  image -->
     <img src="assets/characters/gandalf.jpg" alt="Gandalf">
 
     <!-- Gandalf information paragraph -->
     <div class="character-info">
-      <p>Gandalf is a protagonist in J. R. R. Tolkien's novels The Hobbit and The Lord of the Rings. He is a wizard, one of the Istari order, and the leader of the Fellowship of the Ring. Tolkien took the name "Gandalf" from the Old Norse "Catalogue of Dwarves" (Dvergatal) in the Völuspá.</p>
+      <p>Gandalf the Grey, later known as Gandalf the White, is a pivotal character in J.R.R. Tolkien's "The Lord of the Rings" trilogy. As a wise and powerful wizard, Gandalf serves as a guiding force in the quest to defeat the Dark Lord Sauron. His keen insight, unwavering courage, and deep understanding of Middle-earth's history and lore make him an invaluable ally to the Free Peoples. Throughout the trilogy, Gandalf demonstrates his selflessness and dedication to the greater good, rallying allies, providing sage counsel, and confronting formidable adversaries, including the Balrog of Moria and the Witch-king of Angmar. With his iconic staff, wise words, and unwavering resolve, Gandalf embodies the timeless struggle between light and darkness, inspiring hope and courage in those who fight against the forces of evil.</p>
     </div>
   </div>
 
   <!-- Quote placeholder -->
   <div class="quote-placeholder">
-    <p>Quote: <!-- Add the quote here --></p>
-    <p>You may save this quote, find a new one, or return to the selection screen! Make your choice
-    carefully, once gone you may not see this quote again!</p>
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
     <!-- Add save placeholder button here -->
-    <button>Save</button>
-    <button>New Quote</button>
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
     <button routerLink="/home">Back</button>
   </div>
-
+</body>

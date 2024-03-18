@@ -1,1 +1,33 @@
-<p>elrond works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/elrond.jpg" alt="Elrond">
+
+    <!-- Aragorn information paragraph -->
+    <div class="character-info">
+      <p> Elrond Half-elven, Lord of Rivendell, is a prominent character in J.R.R. Tolkien's "The Lord of the Rings" trilogy. As one of the last descendants of the ancient Elven kings and a bearer of significant wisdom and power, Elrond serves as a key figure in the struggle against the forces of darkness. He provides counsel and refuge to the Fellowship of the Ring, aiding in their quest to destroy the One Ring. With his vast knowledge of history and lore, Elrond plays a pivotal role in unraveling the mysteries surrounding the Ring's creation and the fate of Middle-earth. As a wise and compassionate leader, he represents the enduring strength and resilience of the Elven race in the face of adversity, offering hope and guidance to those who seek to defy the darkness.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>

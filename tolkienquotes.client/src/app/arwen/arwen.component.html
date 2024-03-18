@@ -1,1 +1,33 @@
-<p>arwen works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/arwen.jpg" alt="Arwen">
+
+    <!-- Aragorn information paragraph -->
+    <div class="character-info">
+      <p>Arwen Undómiel, an Elf princess of Rivendell and daughter of Elrond, is portrayed as wise and compassionate in J.R.R. Tolkien's "The Lord of the Rings" trilogy. Her love for Aragorn, a mortal man, leads her to sacrifice her immortality to be with him, symbolizing themes of love and sacrifice. Arwen's character embodies hope and unity, contributing significantly to the overarching narrative as a strong and influential figure who plays a pivotal role in the struggle against the darkness of Sauron.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>

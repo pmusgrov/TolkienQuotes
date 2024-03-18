@@ -1,13 +1,5 @@
 <div class="background-container">
   <div class="menu-bar">
-    <button class="menu-button" (mouseenter)="toggleMenu()">Menu</button>
-  
-    <div class="dropdown-menu" *ngIf="isMenuOpen" >
-      <!-- Add your menu items here -->
-      <a href="#">Account</a>
-      <a href="#">Saved Quotes</a>
-      <a href="#">Logout</a>
-      </div>
   </div>
   <div class="introductory-paragraph">
     <!-- Welcome message -->
@@ -16,16 +8,16 @@
   <!-- Character buttons -->
   <div class="character-buttons">
     <!-- Replace the URLs with the actual image URLs -->
-    <a routerLink="gandalf"><img src="/assets/characters/gandalf.jpg" alt="Gandalf"></a>
-    <a routerLink="frodo"><img src="/assets/characters/frodo.jpg" alt="Frodo"></a>
-    <a routerLink="aragorn"><img src="/assets/characters/aragorn.jpg" alt="Aragorn"></a>
-    <a routerLink="legolas"><img src="/assets/characters/legolas.jpg" alt="Legolas"></a>
-    <a routerLink="gollum"><img src="/assets/characters/gollum.jpg" alt="Gollum"></a>
-    <a routerLink="arwen"><img src="/assets/characters/arwen.jpg" alt="Arwen"></a>
-    <a routerLink="bilbo"><img src="/assets/characters/bilbo.jpg" alt="Bilbo"></a>
-    <a routerLink="elrond"><img src="/assets/characters/elrond.jpg" alt="Elrond"></a>
-    <a routerLink="gimili"><img src="/assets/characters/gimili.jpg" alt="Gimili"></a>
-    <a routerLink="samwise"><img src="/assets/characters/samwise.jpg" alt="Samwise"></a>
+    <a routerLink="gandalf" class="character-tooltip" data-tooltip="Gandalf"><img src="/assets/characters/gandalf.jpg" alt="Gandalf"></a>
+    <a routerLink="frodo" class="character-tooltip" data-tooltip="Frodo"><img src="/assets/characters/frodo.jpg" alt="Frodo"></a>
+    <a routerLink="aragorn" class="character-tooltip" data-tooltip="Aragorn"><img src="/assets/characters/aragorn.jpg" alt="Aragorn"></a>
+    <a routerLink="legolas" class="character-tooltip" data-tooltip="Legolas"><img src="/assets/characters/legolas.jpg" alt="Legolas"></a>
+    <a routerLink="gollum" class="character-tooltip" data-tooltip="Gollum"><img src="/assets/characters/gollum.jpg" alt="Gollum"></a>
+    <a routerLink="arwen" class="character-tooltip" data-tooltip="Arwen"><img src="/assets/characters/arwen.jpg" alt="Arwen"></a>
+    <a routerLink="bilbo" class="character-tooltip" data-tooltip="Bilbo"><img src="/assets/characters/bilbo.jpg" alt="Bilbo"></a>
+    <a routerLink="elrond" class="character-tooltip" data-tooltip="Elrond"><img src="/assets/characters/elrond.jpg" alt="Elrond"></a>
+    <a routerLink="gimili" class="character-tooltip" data-tooltip="Gimili"><img src="/assets/characters/gimili.jpg" alt="Gimili"></a>
+    <a routerLink="samwise" class="character-tooltip" data-tooltip="Samwise"><img src="/assets/characters/samwise.jpg" alt="Samwise"></a>
   </div>
 
 </div>

@@ -1,1 +1,34 @@
-<p>bilbo works!</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arwen</title>
+</head>
+<body>
+  <div class="container">
+    <!--  image -->
+    <img src="assets/characters/bilbo.jpg" alt="Bilbo">
+
+    <!-- Aragorn information paragraph -->
+    <div class="character-info">
+      <p>Bilbo Baggins, a hobbit of the Shire, is the protagonist of J.R.R. Tolkien's "The Hobbit" and a significant character in "The Lord of the Rings" trilogy. Initially portrayed as a home-loving and unadventurous hobbit, Bilbo is thrust into an unexpected journey to reclaim the Lonely Mountain from the dragon Smaug. Throughout his adventures, Bilbo displays courage, wit, and resourcefulness, befriending creatures like Gollum and saving his companions multiple times. His discovery of the One Ring in Gollum's cave sets in motion the events of "The Lord of the Rings," where he plays a crucial role in the War of the Ring. Despite his humble origins, Bilbo's actions have far-reaching consequences, shaping the fate of Middle-earth.</p>
+    </div>
+  </div>
+
+  <!-- Quote placeholder -->
+  <div class="quote-placeholder">
+    <p>
+      You may generate a quote or return to the selection screen! Make your choice
+      carefully, once gone you may not see this quote again!
+    </p>
+    <!-- Add save placeholder button here -->
+    <div *ngIf="quote">
+      <p>Quote: {{ quote }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button (click)="fetchNewQuote()">New Quote</button>
+    <button routerLink="/home">Back</button>
+  </div>
+</body>
+
