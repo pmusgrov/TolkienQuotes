@@ -2,8 +2,8 @@ body {
   background-image: url('/assets/background/parchment.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.9; /* Adjust the opacity as needed */
-  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  opacity: 0.9; 
+  background-attachment: fixed; 
   position: fixed;
   margin: 0;
   padding: 0;
